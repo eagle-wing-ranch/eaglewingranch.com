@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from 'components/Container'
-import { Img } from 'components/Tueri'
 // import jsxToString from 'react-element-to-string'
 import { useLocation } from '@reach/router'
 import { Helmet } from 'react-helmet'
@@ -17,8 +16,8 @@ function Heading({ title, src, alt, subtitle, metaTitle, metaDescription, keywor
 
     const padding = isPortrait ? '177.5%' : '56.25%'
 
-    const siteTitle = 'Teen Ranch Canada'
-    const url = 'https://teenranch.com'
+    const siteTitle = 'Eagle Wing Ranch'
+    const url = 'https://eaglewingranch.ca'
 
     return (
         <>
@@ -37,7 +36,7 @@ function Heading({ title, src, alt, subtitle, metaTitle, metaDescription, keywor
             </Helmet>
 
             <Container type='heading' constrain={false}>
-                <div style={{ paddingBottom: padding, height: "0" }}>{ src && <Img src={ src } alt={ alt || title } ratio='16:9' portraitRatio='4:5' options={imageOptions} /> }</div>
+                <div style={{ paddingBottom: padding, height: "0" }}></div>
                 <div className='overlayContainer'>
                     <div className='overlay'>
                         <h1>{ title }</h1>

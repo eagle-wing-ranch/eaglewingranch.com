@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const path = require('path');
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -42,18 +44,14 @@ module.exports = {
         siteUrl: `https://eaglewingranch.ca`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
-    // Including in your Gatsby plugins will transform any paths in your frontmatter
-    `gatsby-plugin-netlify-cms-paths`,
-
-    // Including in your Remark plugins will transform any paths in your markdown body
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
-        ],
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
