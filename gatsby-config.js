@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: 'https://teenranch.com'
+    siteUrl: 'https://eaglewingranch.ca'
   },
   plugins: [
     {
@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Teen Ranch Canada`,
-        short_name: `Teen Ranch`,
+        name: `Eagle Wing Ranch`,
+        short_name: `Eagle Wing Ranch`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#002146`,
@@ -35,17 +35,24 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     'gatsby-plugin-resolve-src',
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://teenranch.com`,
+        siteUrl: `https://eaglewingranch.ca`,
       },
     },
+    `gatsby-plugin-netlify-cms`,
+    // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-plugin-netlify-cms-paths`,
+
+    // Including in your Remark plugins will transform any paths in your markdown body
     {
-      resolve: `gatsby-plugin-plausible`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        domain: `teenranch.com`,
-        customDomain: 'stats.teenranch.com'
+        plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
+        ],
       },
     },
   ],
