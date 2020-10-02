@@ -5,7 +5,7 @@ import './header.scss'
 import Container from 'components/Container'
 import { Link } from 'gatsby'
 
-import logo from './teenRanchLogo_lightBGR.svg'
+import logo from './eagleWingRanch_noHorse.svg'
 
 export default function Header({ location }) {
 
@@ -30,8 +30,8 @@ export default function Header({ location }) {
                         {/* eslint-disable-next-line */}
                         <li><NavLink to="/boarding/">Boarding</NavLink></li>
                         <li><NavLink to="/lessons/">Lessons</NavLink></li>
+                        <li><NavLink to="/horse-shows/">Horse Shows</NavLink></li>
                         <li><NavLink to="/facilities/">Facilities</NavLink></li>
-                        <li><NavLink to="/horse-shows/">Horse shows</NavLink></li>
                         <li><NavLink to="/about/">About</NavLink></li>
                         <li><NavLink to="/contact/">Contact</NavLink></li>
                     </ul>

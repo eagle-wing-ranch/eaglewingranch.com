@@ -4,6 +4,7 @@ import Container from 'components/Container'
 import { useLocation } from '@reach/router'
 import { Helmet } from 'react-helmet'
 import { withOrientationChange } from 'react-device-detect'
+import Img from 'gatsby-image'
 
 import './heading.scss'
 
@@ -18,6 +19,8 @@ function Heading({ title, src, alt, subtitle, metaTitle, metaDescription, keywor
 
     const siteTitle = 'Eagle Wing Ranch'
     const url = 'https://eaglewingranch.ca'
+
+    console.log(src)
 
     return (
         <>
@@ -36,7 +39,9 @@ function Heading({ title, src, alt, subtitle, metaTitle, metaDescription, keywor
             </Helmet>
 
             <Container type='heading' constrain={false}>
-                <div style={{ paddingBottom: padding, height: "0" }}></div>
+                <div style={{ paddingBottom: padding, height: "0" }}>
+                    { src && <Img fluid={ src } /> }
+                </div>
                 <div className='overlayContainer'>
                     <div className='overlay'>
                         <h1>{ title }</h1>
