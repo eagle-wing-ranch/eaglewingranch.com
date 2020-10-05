@@ -7,7 +7,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 export default ({ data }) => {
-	console.log(data)
+
 	return (
 	
 		<>
@@ -25,10 +25,23 @@ export default ({ data }) => {
 				<h2>Welcome to Eagle Wing Ranch Equestrian.</h2>
 				We are a family owned/operated facility that welcomes the horse and rider of any discipline. With experienced and certified staff, we will make sure your stay at Eagle Wing Ranch is a fun and enjoyable one.
 
-				<Img
-					fluid={ data.file.childImageSharp.fluid }
-					alt='Test'
-				/>
+			</Container>
+
+			<Container type='instagram'>
+				<h2>Instagram feed</h2>
+
+				{
+					data.allInstaNode.edges.map((edge, i) => {
+						console.log(edge)
+						return (
+							<div key={i}>
+								<Img fluid={ edge.node.localFile.childImageSharp.fluid } />
+								{ edge.node.caption }
+							</div>
+						)
+					})
+				}
+
 			</Container>
 
 		</>
@@ -43,6 +56,37 @@ export const query = graphql`
 					...GatsbyImageSharpFluid
 				}
 			}
+		}
+		allInstaNode(filter: { username: { eq: "596695573" } } limit: 10) {
+			edges{
+				node {
+					username
+					id
+					likes
+					comments
+					mediaType
+					preview
+					original
+					timestamp
+					caption
+					thumbnails {
+						src
+						config_width
+						config_height
+					}
+					dimensions {
+						height
+						width
+					}
+					localFile {
+					childImageSharp {
+						fluid {
+						...GatsbyImageSharpFluid
+						}
+					}
+					}
+				}
+			}			
 		}
 	}
 `

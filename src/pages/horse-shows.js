@@ -47,22 +47,70 @@ export default ({ data }) => {
 
 			</Container>
 
+            <Container type='instagram'>
+				<h2>Instagram feed</h2>
+
+				{
+					data.allInstaNode.edges.map((edge, i) => {
+						console.log(edge)
+						return (
+							<div key={i}>
+								<Img fluid={ edge.node.localFile.childImageSharp.fluid } />
+								{ edge.node.caption }
+							</div>
+						)
+					})
+				}
+
+			</Container>
+
 		</>
 	)
 }
 
 export const query = graphql`
-query {
-    allFile(filter: { relativeDirectory: { eq: "sponsors" }}) {
-        edges {
-            node {
-                childImageSharp {
-                    fixed(width: 320) {
-                        ...GatsbyImageSharpFixed
+    query {
+        allFile(filter: { relativeDirectory: { eq: "sponsors" }}) {
+            edges {
+                node {
+                    childImageSharp {
+                        fixed(width: 320) {
+                            ...GatsbyImageSharpFixed
+                        }
                     }
                 }
             }
         }
+        allInstaNode(filter: { username: { eq: "7663664610" } } limit: 10) {
+			edges{
+				node {
+					username
+					id
+					likes
+					comments
+					mediaType
+					preview
+					original
+					timestamp
+					caption
+					thumbnails {
+						src
+						config_width
+						config_height
+					}
+					dimensions {
+						height
+						width
+					}
+					localFile {
+					childImageSharp {
+						fluid {
+						...GatsbyImageSharpFluid
+						}
+					}
+					}
+				}
+			}			
+		}
     }
-}
 `

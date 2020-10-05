@@ -45,9 +45,6 @@ img {
   max-width: 100%;
 }
 
-// .container {
-
-// }
 
 .constrain {
   padding: 0 2rem;
@@ -79,63 +76,15 @@ img {
   padding-bottom: 4rem;
 }
 
+.container--instagram {
+  .constrain {
+    max-width: 600px;
+  }
+}
+
 @media screen and (max-width:63.999em) {
   .staffTable {
     width: 100%;
     overflow-x: auto;
   }
-}
-
-.covid {
-  text-align: center;
-  color: lighten($primary-light, 20);
-  p {
-      color: $primary-white;
-  }
-}
-
-.mel {
-  margin: 0 auto;
-  color: lighten($primary-light, 20);
-  text-align: center;
-  p {
-      color: $primary-white;
-  }
-  .image {
-    width: 180px; 
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .mel {
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    h4 {
-      margin-bottom: -1rem;
-      font-size: 1.2rem;
-      color: lighten($primary-light, 30);
-      font-weight: normal;
-    }
-    .image {
-      margin-right: 4rem;
-    }
-  }
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }

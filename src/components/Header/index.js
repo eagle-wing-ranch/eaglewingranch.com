@@ -5,7 +5,7 @@ import './header.scss'
 import Container from 'components/Container'
 import { Link } from 'gatsby'
 
-import logo from './eagleWingRanch_noHorse.svg'
+import logo from './eagleWingRanchLogo.png'
 
 export default function Header({ location }) {
 
@@ -18,7 +18,9 @@ export default function Header({ location }) {
     return (
         <header>
             <Container type={`header${ expanded ? ' header--expanded' : '' }`}>
-                <NavLink to='/'><img className='logo' src={ logo } alt='Eagle Wing Ranch Logo' /></NavLink>
+                <NavLink to='/'>
+                    <img className='logo' src={ logo } alt='Eagle Wing Ranch Logo' />
+                </NavLink>
                 <button className={`hamburgerMenu ${ expanded ? 'hamburgerMenu--active' : '' }`} onClick={() => setExpanded(expanded => !expanded)} aria-label='Navigation menu'>
                     <span className='hamburgerBox'>
                         <span className='hamburgerInner'></span>
@@ -30,9 +32,7 @@ export default function Header({ location }) {
                         {/* eslint-disable-next-line */}
                         <li><NavLink to="/boarding/">Boarding</NavLink></li>
                         <li><NavLink to="/lessons/">Lessons</NavLink></li>
-                        <li><NavLink to="/horse-shows/">Horse Shows</NavLink></li>
-                        <li><NavLink to="/facilities/">Facilities</NavLink></li>
-                        <li><NavLink to="/about/">About</NavLink></li>
+                        <li><NavLink to="/horse-shows/">Niagara Novice Series</NavLink></li>
                         <li><NavLink to="/contact/">Contact</NavLink></li>
                     </ul>
                 </nav>

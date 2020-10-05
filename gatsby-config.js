@@ -53,5 +53,19 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        // EWR
+        username: '596695573'
+      }
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        // Niagara Novice Series
+        username: '7663664610'
+      }
+    }
   ],
 }
