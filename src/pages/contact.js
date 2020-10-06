@@ -5,6 +5,8 @@ import Heading from 'components/Heading'
 import { graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 
+import Grid from 'components/Grid'
+
 export default ({ data }) => {
 
 	return (
@@ -19,7 +21,7 @@ export default ({ data }) => {
 			/>
             <Container type='body'>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+                <Grid lg={3} xl={3}>
 
                     <div>
                         <h3>Text Amanda</h3>
@@ -39,7 +41,7 @@ export default ({ data }) => {
 
                     </div>                    
 
-                </div>
+                </Grid>
 
             </Container>
 
