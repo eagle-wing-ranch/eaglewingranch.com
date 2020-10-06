@@ -34,7 +34,7 @@ export default ({ data }) => {
 			<Container>
 
 				<h2>Welcome to Eagle Wing Ranch Equestrian.</h2>
-				We are a family owned/operated facility that welcomes the horse and rider of any discipline. With experienced and certified staff, we will make sure your time at Eagle Wing Ranch is a fun and enjoyable one.
+				We are a family owned and operated hunter/jumper facility. With experienced and certified staff, we will make sure your time at Eagle Wing Ranch is a fun and enjoyable one.
 
 			</Container>
 
