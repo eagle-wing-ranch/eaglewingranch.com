@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ce1fadc-4948-45de-8043-64f18beb9d50/deploy-status)](https://app.netlify.com/sites/eaglewingranch/deploys)
+
 <p align="center">
 <a href="https://eaglewingranch.ca">
 <img alt="Eagle Wing Ranch Logo" src="./src/components/Header/teenRanchLogo_lightBGR.svg" />

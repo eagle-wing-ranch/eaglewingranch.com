@@ -3,7 +3,7 @@
 .button {
     outline: none;
     appearance: none;
-    border: none;
+    border: 2px solid $primary-light;
     background: $primary-light;
     padding: 1.2rem 2rem;
     border-radius: $border-radius;
@@ -17,4 +17,9 @@
 .button:hover {
     background: darken($primary-light, 10);
     color: $primary-white;
+}
+
+.button--secondary {
+    
+    background: none;
 }
