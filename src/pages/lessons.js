@@ -25,6 +25,8 @@ export default ({ data }) => {
 
 			<Container>
 
+				<h2>Rider Levels</h2>
+
 				<Program
 					name='Beginner Riders'
 					src={ data.lesson1.childImageSharp.fluid }
