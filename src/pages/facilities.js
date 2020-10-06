@@ -57,17 +57,18 @@ export default ({ data }) => {
 					</p>
 				</Program>
 
-				
-				<Grid lg={2} xl={2}>
-					<div className='instagramPostContainer'>
-						<h4>Inside the barn</h4>
-						<Img fluid={ data.barnInside.childImageSharp.fluid } alt='Inside the barn'/>
-					</div>
-					<div className='instagramPostContainer'>
-						<h4>Indoor arena heated viewing area</h4>
-						<Img fluid={ data.arenaInside2.childImageSharp.fluid } alt='Inside the barn'/>
-					</div>
-				</Grid>
+				<Program
+					name="Inside the Barn"
+					src={ data.barnInside.childImageSharp.fluid }
+					swap
+				>
+				</Program>
+
+				<Program
+					name="Indoor arena heated viewing area"
+					src={ data.arenaInside2.childImageSharp.fluid }
+				>
+				</Program>
 
 			</Container>
 
