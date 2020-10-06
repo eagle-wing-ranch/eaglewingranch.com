@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://eaglewingranch.ca">
-<img alt="Eagle Wing Ranch Logo" src="./logo.png" />
+<img alt="Eagle Wing Ranch Logo" src="./logo.png" style="max-width: 400px" />
 </a>
 <h1 align="center">
 The eaglewingranch.ca code repository
