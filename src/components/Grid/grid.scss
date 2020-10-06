@@ -1,0 +1,86 @@
+.gridContainer {
+    display: grid;
+    gap: 2rem;
+}
+
+.gridContainer--noGap {
+    gap: 0;
+}
+
+// xs
+
+// sm
+@media screen and (min-width: 35.5em) {
+
+}
+
+// md
+@media screen and (min-width: 48em) {
+
+    .grid-md-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-md-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-md-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-md-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+}
+
+// lg
+@media screen and (min-width: 64em) {
+
+    .grid-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-lg-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-lg-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-lg-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-lg-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+}
+
+// xl
+@media screen and (min-width: 80em) {
+
+    .grid-xl-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-xl-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-xl-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .grid-xl-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-xl-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+}

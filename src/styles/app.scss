@@ -10,8 +10,7 @@ html {
 }
 
 body {
-  font-family: $font-secondary, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: $font-secondary;
   // font-weight: 300;
   font-size: 16px;
   margin: 0;
@@ -45,9 +44,10 @@ img {
   max-width: 100%;
 }
 
-// .container {
+h2 {
+  font-size: 3rem;
+}
 
-// }
 
 .constrain {
   padding: 0 2rem;
@@ -79,6 +79,18 @@ img {
   padding-bottom: 4rem;
 }
 
+.container--instagram {
+  background: #fafafa;
+  padding: 4rem 0 4rem 0;
+  a {
+    margin: 2rem 0;
+    display: inline-block;
+  }
+}
+
+
+
+
 @media screen and (max-width:63.999em) {
   .staffTable {
     width: 100%;
@@ -86,56 +98,37 @@ img {
   }
 }
 
-.covid {
-  text-align: center;
-  color: lighten($primary-light, 20);
-  p {
-      color: $primary-white;
+@media screen and (max-width: 47.999em) {
+  .instagramPostContainer {
+    margin: 2rem;
+    .instagramPostCaption {
+      padding: 1rem 0;
+    }
   }
 }
 
-.mel {
-  margin: 0 auto;
-  color: lighten($primary-light, 20);
-  text-align: center;
-  p {
-      color: $primary-white;
-  }
-  .image {
-    width: 180px; 
-    height: 180px;
-    border-radius: 50%;
+@media screen and (min-width: 48em) {
+  .instagramPostContainer {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .mel {
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    h4 {
-      margin-bottom: -1rem;
-      font-size: 1.2rem;
-      color: lighten($primary-light, 30);
-      font-weight: normal;
-    }
-    .image {
-      margin-right: 4rem;
+    .instagramPostCaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      padding: 1rem;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      display: none;
+      overflow-y: auto;
     }
   }
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  .instagramPostContainer:hover {
+    .instagramPostCaption {
+      display: block;
+    }
+  }
 }

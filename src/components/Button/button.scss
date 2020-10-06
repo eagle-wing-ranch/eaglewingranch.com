@@ -3,7 +3,7 @@
 .button {
     outline: none;
     appearance: none;
-    border: none;
+    border: 2px solid $primary-light;
     background: $primary-light;
     padding: 1.2rem 2rem;
     border-radius: $border-radius;
@@ -11,9 +11,15 @@
     letter-spacing: 0.02em;
     margin: 1rem 0;
     display: inline-block;
+    text-decoration: none;
 }
 
 .button:hover {
     background: darken($primary-light, 10);
     color: $primary-white;
+}
+
+.button--secondary {
+    
+    background: none;
 }

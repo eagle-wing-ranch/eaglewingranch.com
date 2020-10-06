@@ -4,10 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const path = require('path');
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: 'https://teenranch.com'
+    siteUrl: 'https://eaglewingranch.ca'
   },
   plugins: [
     {
@@ -21,13 +23,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Teen Ranch Canada`,
-        short_name: `Teen Ranch`,
+        name: `Eagle Wing Ranch`,
+        short_name: `Eagle Wing Ranch`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#002146`,
         display: `standalone`,
-        icon: 'favicon.png'
+        icon: 'icon.png',
+        include_favicon: false
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -35,18 +38,35 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     'gatsby-plugin-resolve-src',
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://teenranch.com`,
+        siteUrl: `https://eaglewingranch.ca`,
       },
     },
     {
-      resolve: `gatsby-plugin-plausible`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        domain: `teenranch.com`,
-        customDomain: 'stats.teenranch.com'
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        // EWR
+        username: '596695573'
+      }
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        // Niagara Novice Series
+        username: '7663664610'
+      }
+    }
   ],
 }

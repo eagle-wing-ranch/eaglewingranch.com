@@ -1,18 +1,18 @@
 import React from 'react'
 
-import { Img } from 'components/Tueri'
+import Img from 'gatsby-image'
 
 import './program.scss'
 
-export default function Program({ src, name, children, swap, imageOptions }) {
+export default function Program({ src, name, children, swap, smallImage }) {
     return (
-        <div className={`programContainer ${ swap ? 'programContainer--swap' : '' }`}>
-            <div className='programImage'>
-                <Img src={src} alt={name} options={ imageOptions } />
-            </div>
+        <div className={`programContainer ${ swap ? 'programContainer--swap' : '' } ${ smallImage ? 'programContainer--smallImage' : '' }`}>
             <div className='programBody'>
                 <h3>{ name }</h3>
                 { children }
+            </div>
+            <div className='programImage'>
+                <Img fluid={src} alt={name} />
             </div>
         </div>
     )
