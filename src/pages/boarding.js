@@ -16,6 +16,7 @@ console.log(data)
 				title={<>Boarding</>}
 				subtitle='Cozy barn, indoor and outdoor arenas and more'
 				metaTitle='Boarding'
+				keywords='eagle wing ranch, horse boarding in welland ontario, indoor riding arena'
 			/>
 
 			<Container>
