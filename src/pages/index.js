@@ -18,9 +18,8 @@ export default ({ data }) => {
 			<Heading
 				src={ data.file.childImageSharp.fluid }
 				alt=''
-				title={<>A family owned and operated<br/>equestrian facility open to any discipline.</>}
+				title='Family owned and operated hunter/jumper facility'
 				subtitle={<>Sitting on 16 beautiful acres along the <strong>Lyons Creek</strong> in <strong>Welland, Ontario</strong>.</>}
-				metaTitle='A family owned and operated equestrian facility open to any discipline.'
 				metaDescription='Sitting on 16 beautiful acres along the Lyons Creek in Welland, Ontario.'
 				keywords='eagle wing ranch, boarding in welland ontario, niagara novice series, riding lessons welland ontario'
 
@@ -28,6 +27,7 @@ export default ({ data }) => {
 				<div className='ctaWrapper'>
 					<Button to='/boarding' type='cta'>Board Your Horse</Button>
 					<Button to='/lessons' type='cta'>Book a Lesson</Button>
+					<Button to='/niagara-novice-series' type='cta'>Niagara Novice Series</Button>
 				</div>
 			</Heading>
 
