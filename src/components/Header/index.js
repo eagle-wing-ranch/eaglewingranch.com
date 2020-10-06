@@ -32,7 +32,7 @@ export default function Header({ location }) {
                         {/* eslint-disable-next-line */}
                         <li><NavLink to="/boarding/">Boarding</NavLink></li>
                         <li><NavLink to="/lessons/">Lessons</NavLink></li>
-                        <li><NavLink to="/horse-shows/">Niagara Novice Series</NavLink></li>
+                        <li><NavLink to="/niagara-novice-series/">Niagara Novice Series</NavLink></li>
                         <li><NavLink to="/contact/">Contact</NavLink></li>
                     </ul>
                 </nav>

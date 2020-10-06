@@ -7,6 +7,12 @@
     position: relative;
     overflow: hidden;
 
+    .imageContainer {
+        .gatsby-image-wrapper {
+            max-height: 100%;
+        }
+    }
+
     .overlayContainer {
         position: absolute;
         top: 0;
@@ -16,7 +22,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: darken($primary-light, 40);
+        background: rgba(0, 23, 49, .8);
         padding: 2rem;
 
         .overlay {
@@ -46,6 +52,54 @@
         color: darken($primary-white, 20);
         font-size: 1.6rem;
         font-family: $font-secondary;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 47.999em) {
+    .container--heading {
+        h1 {
+            font-size: 4rem;
+        }
+        .ctaWrapper {
+            text-align: center;
+            .button {
+                display: block;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 63.999em) {
+    .imageContainer {
+        height: 100vh;
+        .gatsby-image-wrapper {
+            height: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+
+    .container--heading {
+        .imageContainer {
+            height: calc(100vh - 120px);
+        }
+
+        .ctaWrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button--cta {
+            font-size: 1.8rem;
+            padding: 2rem 3rem;
+            margin: 4rem 2rem 0 2rem;
+        }
     }
 
 }

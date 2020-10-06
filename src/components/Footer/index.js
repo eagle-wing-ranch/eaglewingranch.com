@@ -9,10 +9,6 @@ import instagram from './icons/instagram.svg'
 import facebook from './icons/facebook.svg'
 
 export default function Footer() {
-
-    // const data = useStaticQuery(query)
-
-    // console.log(data)
     
     return (
         <footer>

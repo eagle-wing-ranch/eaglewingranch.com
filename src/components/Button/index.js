@@ -4,9 +4,9 @@ import { Link } from '@reach/router'
 
 import './button.scss'
 
-export default function Button({ children, style, className, to, href, onClick, target, rel }) {
+export default function Button({ children, style, className, to, href, onClick, target, rel, type }) {
     
-    const defaultClassName = `button ${ className ? className : '' }`
+    const defaultClassName = `button ${ className ? className : '' } ${ type ? `button--${ type }` : '' }`
 
     const ELEMENT_TYPES = {
         link: {

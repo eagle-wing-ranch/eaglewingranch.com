@@ -4,40 +4,57 @@ import Heading from 'components/Heading'
 // import Button from 'components/Button'
 // import { Link } from '@reach/router'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
+
+import Program from 'components/Program'
 
 export default ({ data }) => {
-	console.log(data)
+	
 	return (
 	
 		<>
 			<Heading
-				src='https://teenranch.nyc3.digitaloceanspaces.com/website/assets/horse19.jpg'
+				src={ data.file.childImageSharp.fluid }
 				alt=''
 				title={<>Lessons</>}
 				subtitle={<>Experience the joy of riding with our fun and energetic <a target="_blank" rel="noopener noreferrer"  href="http://www.cha-ahse.org/">CHA</a> certified instructors.</>}
 				metaTitle='Lessons'
 				metaDescription='Experience the joy of riding with our fun and energetic CHA certified instructors.'
+				keywords='eagle wing ranch, riding lessons welland ontario'
 			/>
 
 			<Container>
 
-				<h2>Rider levels</h2>
-				
-				<h3>Beginner riders</h3>
-				<p>
-					For the beginner rider we will teach fundamental skills needed, such as the use of the four natural aids, basic english position and control at the walk, trot and canter.
-				</p>
+				<Program
+					name='Beginner Riders'
+					src={ data.lesson1.childImageSharp.fluid }
+					smallImage
+				>
+					<p>
+						For the beginner rider we will teach fundamental skills needed, such as the use of the four natural aids, basic english position and control at the walk, trot and canter.
+					</p>
+				</Program>
 
-				<h3>Intermediate riders</h3>
-				<p>
-					We will continue to build upon the fundamental skills, as well as implementing new skills such as turns on the forehand and haunches, proper transitions, riding on a loose rein and jumping position.
-				</p>
+				<Program
+					name='Intermediate Riders'
+					src={ data.lesson2.childImageSharp.fluid }
+					smallImage
+					swap
+				>
+					<p>
+						We will continue to build upon the fundamental skills, as well as implementing new skills such as turns on the forehand and haunches, proper transitions, riding on a loose rein and jumping position.
+					</p>
+				</Program>
 
-				<h3>Advanced riders</h3>
-				<p>
-					Collection & extension, bending, leg yielding, flying lead changes, striding and take off are some of the essential skills you will be taught, so that you will be able to jump both hunter and equitation courses.
-				</p>
+				<Program
+					name='Advanced Riders'
+					src={ data.lesson3.childImageSharp.fluid }
+					smallImage
+				>
+					<p>
+						Collection & extension, bending, leg yielding, flying lead changes, striding and take off are some of the essential skills you will be taught, so that you will be able to jump both hunter and equitation courses.
+					</p>
+				</Program>
 
 				<h2>Pricing</h2>
 				<p>Weekly group lessons: $45.00 +HST</p>
@@ -51,11 +68,6 @@ export default ({ data }) => {
 				Lessons are paid for at the beginning of each month.<br/>
 				Cancellations with 24 hours notice are to be rescheduled at both coach's and parents convenience.
 
-				<Img
-					fluid={ data.file.childImageSharp.fluid }
-					alt='Test'
-				/>
-
 			</Container>
 
 		</>
@@ -64,7 +76,43 @@ export default ({ data }) => {
 
 export const query = graphql`
 	query {
-		file(relativePath: { eq: "17.jpg" }) {
+		file(relativePath: { eq: "gallery/Gallery6.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1920) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+
+		lesson1: file(relativePath: { eq: "lessons/Lesson1.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1920) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		lesson2: file(relativePath: { eq: "lessons/Lessons2.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1920) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		lesson3: file(relativePath: { eq: "lessons/Lesson3.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1920) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		lesson4: file(relativePath: { eq: "lessons/Lessons4.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1920) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		lesson5: file(relativePath: { eq: "lessons/Lessons5.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1920) {
 					...GatsbyImageSharpFluid
