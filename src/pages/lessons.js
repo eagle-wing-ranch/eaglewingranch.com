@@ -48,7 +48,7 @@ export default ({ data }) => {
 
 				<Program
 					name='Advanced Riders'
-					src={ data.lesson3.childImageSharp.fluid }
+					src={ data.lesson4.childImageSharp.fluid }
 					smallImage
 				>
 					<p>

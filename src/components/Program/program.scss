@@ -29,7 +29,10 @@
         display: grid;
         gap: 4rem;
         grid-template-columns: 1fr 1fr;
-
+        .programImage {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
     }
 
     .programContainer.programContainer--smallImage {
@@ -38,8 +41,8 @@
 
     .programContainer--swap {
         grid-template-columns: 1fr 1fr;
-        .programBody {
-            grid-column-start: 1;
+        .programImage {
+            grid-column-start: 2;
             grid-row-start: 1;
         }
     }
