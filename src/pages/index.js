@@ -25,7 +25,7 @@ export default ({ data }) => {
 
 			>
 				<div className='ctaWrapper'>
-					<Button to='/boarding' type='cta'>Board Your Horse</Button>
+					{/* <Button to='/boarding' type='cta'>Board Your Horse</Button> */}
 					<Button to='/lessons' type='cta'>Book a Lesson</Button>
 					<Button to='/niagara-novice-series' type='cta'>Niagara Novice Series</Button>
 				</div>

@@ -22,12 +22,12 @@ export default ({ data }) => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
 
                     <div>
-                        <h3>Phone</h3>
+                        <h3>Text Amanda</h3>
                         <a href="tel:9053590824">(905) 359-0824</a>
                     </div>
 
                     <div>
-                        <h3>Email</h3>
+                        <h3>Email Amanda</h3>
                         <a href='mailto:amanda@eaglewingranch.ca'>amanda@eaglewingranch.ca</a>
                     </div>
 

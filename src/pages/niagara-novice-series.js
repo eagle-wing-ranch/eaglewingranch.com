@@ -49,14 +49,14 @@ export default ({ data }) => {
 
                 <h2>Thank you to our Sponsors!</h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
+                <Grid lg={3} xl={3} gap={false}>
                     {
                         data.allFile.edges.map(({ node }, i) => {
                             if (!node.childImageSharp) return null
                             return <Sponsor key={i}><Img fixed={ node.childImageSharp.fixed } objectFit="cover" objectPosition="50% 50%"/></Sponsor>
                         })
                     }
-                </div>
+                </Grid>
 
 			</Container>
 

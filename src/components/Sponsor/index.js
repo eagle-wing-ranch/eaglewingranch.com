@@ -6,7 +6,9 @@ export default function Sponsor({ children }) {
     
     return (
         <div className='sponsorContainer'>
-            { children }
+            <div className='sponsorPadding'>
+                { children }
+            </div>
         </div>
     )
 
