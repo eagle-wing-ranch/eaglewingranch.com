@@ -13,6 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <link rel="shortcut icon" href="/favicon.png" />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
