@@ -67,6 +67,13 @@ module.exports = {
         // Niagara Novice Series
         username: '7663664610'
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `eaglewingranch.ca`,
+        customDomain: 'stats.eaglewingranch.ca'
+      },
+    },
   ],
 }
