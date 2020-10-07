@@ -20,7 +20,7 @@
     "gatsby-plugin-manifest": "^2.4.27",
     "gatsby-plugin-netlify": "^2.3.16",
     "gatsby-plugin-offline": "^3.2.26",
-    "gatsby-plugin-plausible": "0.0.6",
+    "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-sass": "^2.3.12",

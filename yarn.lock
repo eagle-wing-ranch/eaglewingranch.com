@@ -6429,10 +6429,10 @@ gatsby-plugin-page-creator@^2.3.28:
     graphql "^14.6.0"
     lodash "^4.17.20"
 
-gatsby-plugin-plausible@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-plausible/-/gatsby-plugin-plausible-0.0.6.tgz#97f0ab4e1185af83a2c0317cdfe2a3b23690e26d"
-  integrity sha512-qUdPQ3haeX2DIywGZ2boMpmFAnSbWzqS9cG9/OO0mWLigA0sDLWwGkpHIAvrfepgbB9U/roLtXflctBwOIxtcQ==
+gatsby-plugin-plausible@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-plausible/-/gatsby-plugin-plausible-0.0.7.tgz#6f8c922bbc672a73bd8e9a39add61fb62ec96566"
+  integrity sha512-pWCXsrWal8lWMmZ1wJ2dolbwZZR1CZU1LVR/K1rYC8NeA+uqTLY8h3uH3hFgP5n8jmRRenOSJ9SjWM9OIdCjOA==
   dependencies:
     "@babel/runtime" "^7.9.2"
     minimatch "3.0.4"
