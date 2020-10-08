@@ -72,7 +72,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `eaglewingranch.ca`,
-        // customDomain: 'stats.eaglewingranch.ca'
+        customDomain: 'stats.eaglewingranch.ca'
       },
     },
   ],
