@@ -3,13 +3,43 @@ import React, { useState, useEffect } from 'react'
 import './hamburger.scss'
 import './header.scss'
 import Container from 'components/Container'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-import logo from './eagleWingRanchLogo.png'
+// import logo from './eagleWingRanchLogo.png'
+
+const QUERY = graphql`
+query {
+    desktopImage: file(relativePath: { eq: "eagleWingRanchLogo.png" }) {
+        childImageSharp {
+            fixed(height: 80 quality: 64) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+        }
+    }
+    mobileImage: file(relativePath: { eq: "eagleWingRanchLogo.png" }) {
+        childImageSharp {
+            fixed(height: 40 quality: 64) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+        }
+    }
+}
+`
 
 export default function Header({ location }) {
 
     const [expanded, setExpanded] = useState()
+
+    const data = useStaticQuery(QUERY)
+
+    const sources = [
+        data.mobileImage.childImageSharp.fixed,
+        {
+            ...data.desktopImage.childImageSharp.fixed,
+            media: `(min-width: 1024px)`
+        }
+    ]
 
     useEffect(() => {
         setExpanded()
@@ -19,7 +49,8 @@ export default function Header({ location }) {
         <header>
             <Container type={`header${ expanded ? ' header--expanded' : '' }`}>
                 <NavLink to='/'>
-                    <img className='logo' src={ logo } alt='Eagle Wing Ranch Logo' />
+                    {/* <img className='logo' src={ logo } alt='Eagle Wing Ranch Logo' /> */}
+                    <Img className='logo' fixed={ sources } fadeIn={ false } critical={ true } alt='Eagle Wing Ranch Logo' />
                 </NavLink>
                 <button className={`hamburgerMenu ${ expanded ? 'hamburgerMenu--active' : '' }`} onClick={() => setExpanded(expanded => !expanded)} aria-label='Navigation menu'>
                     <span className='hamburgerBox'>

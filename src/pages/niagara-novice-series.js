@@ -98,8 +98,8 @@ export const query = graphql`
 
 		file(relativePath: { eq: "shows/Show6.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
@@ -108,8 +108,8 @@ export const query = graphql`
             edges {
                 node {
                     childImageSharp {
-                        fixed(width: 320) {
-                            ...GatsbyImageSharpFixed
+                        fixed(width: 320 quality: 64) {
+                            ...GatsbyImageSharpFixed_withWebp
                         }
                     }
                 }
@@ -139,8 +139,8 @@ export const query = graphql`
 					}
 					localFile {
 					childImageSharp {
-						fluid {
-						...GatsbyImageSharpFluid
+						fluid(maxWidth: 960 quality: 64) {
+						...GatsbyImageSharpFluid_withWebp
 						}
 					}
 					}
