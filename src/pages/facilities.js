@@ -80,48 +80,48 @@ export const query = graphql`
 	query {
 		file(relativePath: { eq: "facilities/Facility3.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		barnOutside: file(relativePath: { eq: "facilities/Facility1.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		barnInside: file(relativePath: { eq: "facilities/Facility2.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		arenaOutside: file(relativePath: { eq: "facilities/outdoorArena.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		arenaInside: file(relativePath: { eq: "facilities/Facility4.JPG" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		arenaInside2: file(relativePath: { eq: "facilities/Facility7.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}

@@ -9,7 +9,6 @@ import Img from 'gatsby-image'
 import Button from 'components/Button'
 
 import Grid from 'components/Grid'
-
 export default ({ data }) => {
 
 	return (
@@ -32,7 +31,6 @@ export default ({ data }) => {
 			</Heading>
 
 			<Container>
-
 				<h2>Welcome to Eagle Wing Ranch Equestrian.</h2>
 				We are a family owned and operated hunter/jumper facility. With experienced and certified staff, we will make sure your time at Eagle Wing Ranch is a fun and enjoyable one.
 
@@ -74,8 +72,8 @@ export const query = graphql`
 	query {
 		file(relativePath: { eq: "gallery/Gallery7.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
@@ -102,8 +100,8 @@ export const query = graphql`
 					}
 					localFile {
 					childImageSharp {
-						fluid {
-						...GatsbyImageSharpFluid
+						fluid(maxWidth: 960 quality: 64) {
+						...GatsbyImageSharpFluid_withWebp
 						}
 					}
 					}

@@ -58,8 +58,8 @@ export const query = graphql`
 	query {
 		file(relativePath: { eq: "map.png" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}

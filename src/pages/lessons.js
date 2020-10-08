@@ -80,44 +80,44 @@ export const query = graphql`
 	query {
 		file(relativePath: { eq: "gallery/Gallery6.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 
 		lesson1: file(relativePath: { eq: "lessons/Lesson1.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 		lesson2: file(relativePath: { eq: "lessons/Lessons2.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 		lesson3: file(relativePath: { eq: "lessons/Lesson3.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 		lesson4: file(relativePath: { eq: "lessons/Lessons4.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 		lesson5: file(relativePath: { eq: "lessons/Lessons5.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1920) {
-					...GatsbyImageSharpFluid
+				fluid(maxWidth: 1920 quality: 64) {
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
