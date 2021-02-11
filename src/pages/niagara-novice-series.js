@@ -29,8 +29,6 @@ export default ({ data }) => {
 
 				<h2>Niagara Novice Series</h2>
 
-				<strong>** Cancelled due to COVID-19</strong>
-
 				<p>Eagle Wing Ranch is dedicated to bring you a professional, fun and safe show atmosphere for riders of all ages.</p>
 
 				<Button target="_blank" href="https://www.facebook.com/NiagaraNS">Follow Niagara Novice Series on Facebook</Button>
