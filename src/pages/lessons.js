@@ -59,7 +59,7 @@ export default ({ data }) => {
 				</Program>
 
 				<h2>Pricing</h2>
-				<p>Weekly group lessons: $45.00 +HST</p>
+				<p>Weekly group lessons: $45.00 (includes HST)</p>
 				<p>Non-weekly lessons: $55.00 +HST</p>
 
 				<h2>Contact Amanda today to book a lesson:</h2>
