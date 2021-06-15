@@ -118,7 +118,7 @@ export const query = graphql`
 			}
 		}
 
-        allFile(filter: { relativeDirectory: { eq: "sponsors" }}) {
+        allFile(filter: { relativeDirectory: { eq: "sponsors2021" }}) {
             edges {
                 node {
                     childImageSharp {

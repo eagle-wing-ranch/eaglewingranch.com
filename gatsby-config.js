@@ -36,7 +36,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     'gatsby-plugin-resolve-src',
     `gatsby-plugin-netlify`,
     {
