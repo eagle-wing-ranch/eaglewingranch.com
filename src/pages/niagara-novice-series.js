@@ -12,6 +12,17 @@ import Button from 'components/Button'
 import Sponsor from 'components/Sponsor'
 import InstagramFeed from 'components/InstagramFeed'
 
+const URLS = {
+	'Pen Financial': 'https://www.penfinancial.com',
+	'Jansen Furniture': 'https://www.jansenfurniture.ca',
+	'Health Equine': 'http://www.healthequinetherapies.ca',
+	'Egger': 'https://eggertruck.com',
+	'DocNet': 'https://www.docnet.ca',
+	'Greenhawk': 'https://greenhawk.com/en/',
+	'Nugent Veterinary': 'https://www.nugentvetservices.com',
+	'BAHR Saddlery': 'https://www.bahrsaddlery.com'
+}
+
 export default ({ data }) => {
 	return (
 	
@@ -60,7 +71,7 @@ export default ({ data }) => {
                     {
                         data.allFile.edges.map(({ node }, i) => {
                             if (!node.childImageSharp) return null
-                            return <Sponsor key={i}><Img fixed={ node.childImageSharp.fixed } objectFit="cover" objectPosition="50% 50%"/></Sponsor>
+                            return <Sponsor key={i} url={ URLS[node.name] } title={ node.name }><a target="_blank" rel="noreferrer noopener" href={URLS[node.name]}><Img fixed={ node.childImageSharp.fixed } objectFit="cover" objectPosition="50% 50%"/></a></Sponsor>
                         })
                     }
                 </Grid>
@@ -126,6 +137,7 @@ export const query = graphql`
                             ...GatsbyImageSharpFixed_withWebp
                         }
                     }
+					name
                 }
             }
         }
