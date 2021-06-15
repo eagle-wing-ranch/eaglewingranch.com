@@ -36,10 +36,10 @@ export default ({ data }) => {
 
 				<h2>2021 Show Dates</h2>
 				<ul>
-					<li>June 12</li>
-					<li>July 10</li>
+					<li>July 24</li>
 					<li>August 14</li>
 					<li>September 11</li>
+					<li>October 9</li>
 				</ul>
 
 				<h2>Why show Niagara Novice Series?</h2>
