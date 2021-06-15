@@ -18,7 +18,9 @@ export default function InstagramFeed({ instagramId, children }) {
     async function fetchInstagramPosts(instagramId) {
         try {
             const response = await fetch(`https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${instagramId}","first":${LIMIT},"after":null}`)
-            const { data } = await response.json()
+            const res = await response.json()
+            console.log(res)
+            const { data } = res
             const photos = []
             data.user.edge_owner_to_timeline_media.edges.map(
                 ({ node }) => {
