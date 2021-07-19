@@ -20,7 +20,8 @@ const URLS = {
 	'DocNet': 'https://www.docnet.ca',
 	'Greenhawk': 'https://greenhawk.com/en/',
 	'Nugent Veterinary': 'https://www.nugentvetservices.com',
-	'BAHR Saddlery': 'https://www.bahrsaddlery.com'
+	'BAHR Saddlery': 'https://www.bahrsaddlery.com',
+	'Chrome+Dapple': 'https://www.chromeanddapple.com'
 }
 
 export default ({ data }) => {
@@ -52,6 +53,8 @@ export default ({ data }) => {
 					<li>September 11</li>
 					<li>October 9</li>
 				</ul>
+
+				<Button target="_blank" href="/pdf/nnsEntryForm_2021.pdf">2021 Entry Form</Button>
 
 				<h2>Why show Niagara Novice Series?</h2>
                 
