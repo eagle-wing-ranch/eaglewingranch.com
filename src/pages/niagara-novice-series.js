@@ -53,12 +53,12 @@ export default ({ data }) => {
           Follow Niagara Novice Series on Facebook
         </Button>
 
-        <h2>2023 Show Dates</h2>
+        <h2>2024 Show Dates</h2>
         <ul>
-          <li>June 17</li>
-          <li>July 15</li>
-          <li>August 12</li>
-          <li>September 9</li>
+          <li>June 15</li>
+          <li>July 13</li>
+          <li>August 10</li>
+          <li>September 7</li>
         </ul>
 
         <Button target="_blank" href="/pdf/nnsEntryForm_2023.pdf">
