@@ -55,10 +55,10 @@ export default ({ data }) => {
 
         <h2>2024 Show Dates</h2>
         <ul>
-          <li>June 15</li>
-          <li>July 13</li>
+          <li>June 22</li>
+          <li>July 20</li>
           <li>August 10</li>
-          <li>September 7</li>
+          <li>September 21</li>
         </ul>
 
         <Button target="_blank" href="/pdf/nnsEntryForm_2023.pdf">
