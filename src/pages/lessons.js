@@ -70,14 +70,14 @@ export default ({ data }) => {
             courses.
           </p>
         </Program>
-        <h2>Pricing</h2>
+        {/* <h2>Pricing</h2>
         <h3>Monthly Group Lessons</h3>
         <ul>
           <li>1 lesson per week: $177 +HST ($200)</li>
           <li>2 lessons per week: $332 +HST ($375)</li>
         </ul>
         <p>Additional lessons are $50 +HST ($56.50)</p>
-        <p>*Private lessons not available</p>
+        <p>*Private lessons not available</p> */}
         <h2>Contact Amanda today to book a lesson:</h2>
         Text: <a href="tel:9053590824">(905) 359-0824</a>
         <br />
